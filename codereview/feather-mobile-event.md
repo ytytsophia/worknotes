@@ -67,3 +67,20 @@ bindRuleShow: function() {
 
 链式书写
 
+##代码严谨性
+
+```js
+validAddress: function(){
+    var name = $("#name").val(),
+        address = $("#address").val(),
+        mobile = $("#mobile").val();
+
+    if(name=="" || address == "" || mobile == "") {
+        this.setAddressInputError("输入框不能为空");
+    } else {
+        // this.setAddressInputSuccess();
+        return true;
+    }
+}
+```
+空格也能通过验证建议用trim
